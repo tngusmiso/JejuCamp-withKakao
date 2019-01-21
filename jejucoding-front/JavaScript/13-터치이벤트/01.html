@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>touch event</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<style>
+#elem {
+    height: 50px;
+    background: red;
+    -webkit-user-select: none;
+}
+</style>
+</head>
+<body>
+<div id="elem"></div>
+<p id="output"></p>
+
+<script>
+var elem = document.getElementById('elem');
+var output = document.getElementById('output');
+
+var infoMap = {
+    start: false,
+    move: false
+};
+
+
+function startHandler (e) {
+    // output.innerHTML = e.pageX;
+    infoMap.start = true;
+    output.innerHTML = 'start!';
+}
+
+function moveHandler (e) {
+    if (!infoMap.start) {
+        return;
+    }
+
+    infoMap.move = true;
+
+    output.innerHTML = 'moving..';
+}
+
+function endHandler (e) {
+    if (!infoMap.move) {
+        alert('탭!');
+    }
+
+    infoMap.start = false;
+    infoMap.move = false;
+
+    output.innerHTML = 'end!';
+}
+
+elem.addEventListener('touchstart', startHandler, false);
+elem.addEventListener('touchmove', moveHandler, false);
+elem.addEventListener('touchend', endHandler, false);
+</script>
+</body>
+</html>
+
+
+
+
+

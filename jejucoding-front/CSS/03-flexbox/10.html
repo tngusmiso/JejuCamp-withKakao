@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<style>
+/* 부모 */
+div {
+	display: flex;
+}
+
+/* 자식 */
+section {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+	padding: 0;
+}
+section:nth-child(1) {  }
+section:nth-child(2) {  }
+section:nth-child(3) {  }
+</style>
+</head>
+<body>
+<h1>flex-basis (flex item에 지정)</h1>
+<h2>원래 가지고 있는 flex item의 사이즈를 나타냅니다. 즉, flex-grow와 flex-shrink로 결정되는 비율은 flex-basis에 설정된 값을 뺀 나머지 공간에 영향을 미칩니다.</h2>
+
+<div style="min-height: 400px;">
+	<section>A</section>
+	<section>B</section>
+	<section>C</section>
+</div>
+
+</body>
+</html>

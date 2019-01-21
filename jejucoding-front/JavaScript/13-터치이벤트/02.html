@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>touch event</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<style>
+#elem {
+    height: 50px;
+    background: red;
+    -webkit-user-select: none;
+}
+</style>
+</head>
+<body>
+<div id="elem"></div>
+<p id="output"></p>
+
+
+<script>
+var elem = document.getElementById('elem');
+var output = document.getElementById('output');
+var eventName;
+
+var useragent = navigator.userAgent.toLowerCase();
+if (useragent.indexOf('iphone') >= 0 || useragent.indexOf('android') >= 0) {
+    eventName = 'touchstart';
+} else {
+    eventName = 'click';
+}
+
+function startHandler (e) {
+    output.innerHTML = e.pageX;
+}
+
+elem.addEventListener(eventName, startHandler, false);
+</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<style>
+/* 부모 */
+div {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	align-content: stretch; /* flex-start, center, flex-end, space-between, space-around, stretch */
+}
+
+/* 자식 */
+section {
+	
+}
+</style>
+</head>
+<body>
+<h1>align-content (flex container에 지정)</h1>
+<h2>여러 행일 경우 flex item들의 집합을 수직 축 방향으로 정렬 (flex-wrap: nowrap을 제외한 값으로 설정해야 유효)</h2>
+
+<div style="min-height: 400px;">
+	<section>A</section>
+	<section>B</section>
+	<section>C</section>
+	<section>D</section>
+	<section>E</section>
+</div>
+
+</body>
+</html>

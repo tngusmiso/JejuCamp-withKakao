@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 Flex Box Layout</title>
+<meta charset="UTF-8">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #ddd;
+}
+#page-container {
+	width: 960px;
+	padding: 0 0 20px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+}
+#page-container > * {
+	padding: 0 20px;
+}
+header.global {
+	height: 100px;
+}
+#logo {
+	
+}
+nav.global > ul {
+	
+}
+nav.global > ul > li {
+	list-style: none;
+	border: 1px solid #000;
+	background-color: #666;
+	min-width: 100px;
+}
+nav.global > ul > li:hover {
+	min-width: 300px;
+}
+nav.global > ul > li > a {
+	display: block;
+	padding: 10px 0;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+article {
+	padding: 20px 0;
+}
+.secondary {
+	
+}
+.secondary aside {
+	width: 270px;
+	padding: 10px;
+	border: 1px solid #aaa;
+	background-color: #eee;
+}
+</style>
+</head>
+<body>
+<div id="page-container">
+	<header class="global">
+		<h1 id="logo">Logo</h1>
+		<section id="search">
+			<input type="search" placeholder="Search">
+			<button>Search</button>
+		</section>
+	</header>
+	<nav class="global">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Travel</a></li>
+			<li><a href="#">Food</a></li>
+			<li><a href="#">Community</a></li>
+		</ul>
+	</nav>
+	<section class="primary">
+		<article>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac hendrerit lectus. Suspendisse et faucibus dui. Mauris euismod eros at nibh feugiat pharetra. Morbi sit amet eros felis. Sed libero justo, mattis vitae ultricies quis, porttitor nec orci. Quisque vel felis vel lectus faucibus luctus sit amet a urna. Cras sem mi, aliquam a tincidunt a, ornare quis sem. Nullam mi nulla, eleifend nec commodo vel, condimentum id odio. Maecenas vitae augue malesuada metus gravida pretium. Aliquam adipiscing, elit sit amet interdum convallis, erat enim placerat diam, interdum egestas lacus neque tristique eros.</p>
+			<p>In luctus, urna id rutrum dapibus, ipsum mauris hendrerit leo, quis semper mi dolor vitae neque. Integer egestas leo arcu, sed malesuada ipsum. Nam vitae enim vel lectus placerat volutpat id ut quam. Phasellus fringilla pellentesque tortor eget iaculis. Donec faucibus fringilla quam et bibendum. Nulla eleifend neque at augue tincidunt vestibulum. Ut sed odio eu felis interdum cursus. Nam sit amet vulputate libero. Maecenas eget metus at turpis commodo vestibulum. Pellentesque nec odio dolor. Proin in pretium nisi. Etiam blandit justo quis lacus rutrum tincidunt. Vivamus ac cursus arcu. Cras gravida orci eget arcu tempor dignissim. Donec arcu diam, pulvinar elementum iaculis in, bibendum non libero. Morbi vitae elit erat.</p>
+		</article>
+	</section>
+	<section class="secondary">
+		<aside>
+			<h1>aside 1</h1>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac hendrerit lectus. Suspendisse et faucibus dui. Mauris euismod eros at nibh feugiat pharetra. Morbi sit amet eros felis.
+		</aside>
+		<aside>
+			<h1>aside 2</h1>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac hendrerit lectus. Suspendisse et faucibus dui. Mauris euismod eros at nibh feugiat pharetra. Morbi sit amet eros felis.
+		</aside>
+		<aside>
+			<h1>aside 3</h1>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac hendrerit lectus. Suspendisse et faucibus dui. Mauris euismod eros at nibh feugiat pharetra. Morbi sit amet eros felis.
+		</aside>
+	</section>
+</div>
+</body>
+</html>

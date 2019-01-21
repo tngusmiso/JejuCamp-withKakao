@@ -1,0 +1,124 @@
+#game {
+	position: relative;
+}
+#game > div {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 623px;
+	height: 358px;
+}
+#intro {
+	z-index: 2;
+	background: url("../images/intro.jpg") no-repeat 0 0 #000;
+	cursor: pointer;
+}
+#stage {
+	z-index: 1;
+	background: url("../images/bg.jpg") no-repeat 0 0 #000;
+}
+#mirror {
+	position: absolute;
+	right: 50px;
+	top: 70px;
+	width: 60px;
+	height: 87px;
+	background: url('../images/mirror.png') no-repeat 0 0;
+	cursor: pointer;
+}
+.ghost {
+	position: absolute;
+	width: 90px;
+	height: 109px;
+	background: url("../images/ghost.png") no-repeat 0 0 #000;
+	-webkit-animation: chairAnimation infinite 2s;
+	-moz-animation: chairAnimation infinite 2s;
+	-o-animation: chairAnimation infinite 2s;
+	-ms-animation: chairAnimation infinite 2s;
+	animation: chairAnimation infinite 2s;
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-o-transform-origin: bottom;
+	-ms-transform-origin: bottom;
+	transform-origin: bottom;
+	cursor: pointer;
+}
+@-webkit-keyframes chairAnimation {
+	0% {
+		-webkit-transform: rotate(-3deg);
+	}
+	50% {
+		-webkit-transform: rotate(3deg);
+	}
+	100% {
+		-webkit-transform: rotate(-3deg);
+	}
+}
+@-moz-keyframes chairAnimation {
+	0% {
+		-moz-transform: rotate(-3deg);
+	}
+	50% {
+		-moz-transform: rotate(3deg);
+	}
+	100% {
+		-moz-transform: rotate(-3deg);
+	}
+}
+@-o-keyframes chairAnimation {
+	0% {
+		-o-transform: rotate(-3deg);
+	}
+	50% {
+		-o-transform: rotate(3deg);
+	}
+	100% {
+		-o-transform: rotate(-3deg);
+	}
+}
+@-ms-keyframes chairAnimation {
+	0% {
+		-ms-transform: rotate(-3deg);
+	}
+	50% {
+		-ms-transform: rotate(3deg);
+	}
+	100% {
+		-ms-transform: rotate(-3deg);
+	}
+}
+@keyframes chairAnimation {
+	0% {
+		transform: rotate(-3deg);
+	}
+	50% {
+		transform: rotate(3deg);
+	}
+	100% {
+		transform: rotate(-3deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

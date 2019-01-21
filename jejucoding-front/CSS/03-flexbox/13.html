@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<style>
+/* 부모 */
+div {
+	display: flex;
+}
+
+/* 자식 */
+section {
+	flex: 1 1 auto;
+	padding: 0;
+}
+section:nth-child(1) {  }
+section:nth-child(2) {  }
+section:nth-child(3) {  }
+</style>
+</head>
+<body>
+<h1>order (flex item에 지정)</h1>
+<h2>숫자를 이용해 flex item의 시각적 나열의 순서를 결정합니다.</h2>
+
+<div style="min-height: 400px;">
+	<section>A</section>
+	<section>B</section>
+	<section>C</section>
+</div>
+
+
+<!-- http://demo.agektmr.com/flexbox/ -->
+</body>
+</html>

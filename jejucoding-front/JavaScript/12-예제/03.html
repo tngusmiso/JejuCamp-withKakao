@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; }
+html {
+    height: 100%;
+    font-size: 14px;
+}
+body {
+    display: flex;
+    min-height: 100%;
+    background-color: #000;
+}
+.page {
+    max-width: 940px;
+    margin: 0 auto;
+}
+.primary {
+    padding: 1.5rem;
+    background-color: #eee;
+}
+.secondary {
+    padding: 1.5rem;
+    background-color: yellow;
+}
+#main-article h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem; font-weight: 100;
+}
+.accordion-item {
+    overflow: hidden;
+    /*height: 30px;*/
+    background-color: #fff;
+    transition: height 0.5s;
+}
+.accordion-item-title {
+    padding-left: 1rem;
+    border-bottom: 1px solid #000;
+    font-size: 1rem; color: #fff; line-height: 29px;
+    background-color: #444;
+    cursor: pointer;
+}
+.accordion-item.active .accordion-item-title {
+    color: yellow;
+}
+.accordion-item-content {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 601px) {
+    .page {
+        display: flex;
+        flex-direction: row;
+    }
+    .primary {
+        flex: 7;
+    }
+    .secondary {
+        flex: 3;
+    }
+}
+</style>
+</head>
+<body>
+<div class="page">
+    <div class="primary">
+        <article id="main-article" class="accordion">
+            <header>
+                <h1>등장인물</h1>
+            </header>
+            <section class="accordion-item">
+                <h2 class="accordion-item-title">배트맨</h2>
+                <div class="accordion-item-content">
+                    <p>과거 주인공이자 부유한 기업인이자 무술인. 밤이 되면 검은 슈트를 입고 배트맨으로서 출동해 범죄를 물리친다. 그러나, 파이널 크라이시스 6편에서 다크사이드에 의해 사망하고 이후 '딕 그레이슨'이 죽었다고 알려진 브루스 웨인을 대신하여 배트맨의 역할을 수행해 나간다. 현재에는 돌아와서(Return of Bruce Wayne) 배트맨 2인체제로 활동하고 있다. New 52 : DC코믹스의 세계관 정리 이벤트. 생물학적 아들인 대미언을 로빈으로 삼아 배트맨으로 활동중이다.</p>
+                </div>
+            </section>
+            <section class="accordion-item">
+                <h2 class="accordion-item-title">딕 그레이슨</h2>
+                <div class="accordion-item-content">
+                    <p>브루스 웨인(배트맨)이 죽은 이후 1대 로빈이자 나이트윙이었던 딕 그레이슨이 브루스 웨인을 대신하여 배트맨의 역할을 수행하였으나 브루스 웨인의 귀환을 계기로 [나이트윙]으로 돌아가게 된다. 대미언 웨인 (미래) 미래에선 브루스 웨인의 숨겨진 아들이자 현재 로빈인 데미안이 세 번째 배트맨이 되어있다.</p>
+                </div>
+            </section>
+            <section class="accordion-item">
+                <h2 class="accordion-item-title">테리 맥기니스</h2>
+                <div class="accordion-item-content">
+                    <p>팀버스 세계관(비욘드 세계관은 DC가 중점적으로 이야기를 전개하는 지구-1의 세계관과 다른 지구,즉 평행세계인 지구-12의 얘기)에서 네오 고담시에서 브루스의 지원을 받아 새로운 배트맨(Batman beyond)로 활약한다. ->세계관 변동으로 인해, 브루스가 아닌 대미언의 지도 아래 배트맨으로서 훈련받는다.</p>
+                </div>
+            </section>
+        </article>
+    </div>
+    <div class="secondary">
+        secondary contents
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

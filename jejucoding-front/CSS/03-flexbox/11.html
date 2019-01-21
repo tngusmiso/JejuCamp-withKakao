@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<style>
+/* 부모 */
+div {
+	display: flex;
+}
+
+/* 자식 */
+section {
+	flex: 1 1 auto;
+	/* 축약형: 순서대로 flex-grow, flex-shrink, flex-basis를 나타냅니다. */
+	padding: 0;
+}
+section:nth-child(1) {  }
+section:nth-child(2) {  }
+section:nth-child(3) {  }
+</style>
+</head>
+<body>
+<h1>flex (flex item에 지정)</h1>
+<h2>flex-grow, flex-shrink, flex-basis을 한꺼번에 지정할 수 있습니다.</h2>
+
+<div style="min-height: 400px;">
+	<section>A</section>
+	<section>B</section>
+	<section>C</section>
+</div>
+
+</body>
+</html>
