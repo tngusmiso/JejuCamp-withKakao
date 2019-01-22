@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+        <script>
+            // 객체: 속성(property)와 메소드(method)를 가지고 있는 집합체.
+
+            // 첫번째 방법 : 빈 객체를 만들고 속성을 부여
+            var person = {};
+            person.username = '임수현';
+            person.age = 23;
+            console.log(person.username);
+
+            // 두번째 방법 : 객체를 생성하면서 속성을 부여
+            var person2 = {
+                username : '임수현',
+                age : 23
+            };
+
+            // 메소드 부여 (익명메소드)
+            person2.introduce = function(){
+                console.log("안녕하세요. " + this.username + "입니다.");    //this는 현재 객체를 뜻함
+            }
+            person2.introduce();
+
+            // 기타 객체 메소드
+            console.log('ㅋㅋㅋ');
+            document.write('ㅎㅎㅎ');
+        </script>
+    </head>
+
+    <body>
+        <p>body에 작성한 내용</p>
+    </body>
+</html>
+
+
