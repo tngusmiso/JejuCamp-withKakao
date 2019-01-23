@@ -27,4 +27,7 @@ print(nameThree.index('h'))
 print(nameThree.count('u')) # 대문자는 미포함
 print(nameThree.strip('l')) # 문자열의 양 끝에 존재하는 인자로 받아온 값을 없애준다.
 
-
+x = '10'
+y = '33'
+print(x.zfill(4))   # 자리수를 4자리로 맞춤
+print(y.zfill(4))   # 자리수를 4자리로 맞춤
