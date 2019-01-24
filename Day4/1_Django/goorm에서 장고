@@ -1,0 +1,66 @@
+mkdir mysite
+cd mysite   //이건 꼭 다시 실행해주어야 함
+
+pip3 install virtualenv
+virtualenv myvenv
+source myvenv/bin/activate  //이건 꼭 다시 실행해주어야 함
+
+pip3 install django==2.1
+django-admin startproject jejucafe_lsh .
+
+python manage.py migrate
+settings.py 
+    -> ALLOWED_HOSTS = ['*']
+    -> 저장!
+
+
+python manage.py runserver 0:80 //이건 꼭 다시 실행해주어야 함
+project url클릭하면 로켓화면!
+    -> ctrl+c 서버 나가기
+
+
+python manage.py startapp main
+settings.py -> INSTALLED_APPS = ['main']
+urls.py 
+    -> from main.view import index
+    -> path('', index),
+    여기에서 path 첫번째 인자가 빈 문자열인 이유는 url 뒤에 아무것도 없을 경우 index가 뜨기 때문이다.
+    만약, 다른 페이지를 보여주고 싶으면 path('cafelist/',cafelist) 처럼 하면 된다.
+
+
+main > views.py
+    ->  def index(request):
+            return render(request, 'main/index.html')
+
+
+python manage.py runserver 0:80 //이건 꼭 다시 실행해주어야 함
+project url클릭하면 index.html 꾸민 모양대로 나옴
+    -> ctrl+c 서버 나가기
+
+
+# 게시판 기능
+models.py
+    class Cafe(models.Model):
+        name = models.CharField(max_length=50)
+        content = models.TextField()
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser    =>  username, email, password 설정. admin페이지에서 로그인 가능
+
+
+main > admin.py
+    from .models import Cafe
+    admin.site.register(Cafe)  
+
+
+
+
+
+======================================
+
+
+python => DB
+1. makemigrations : 파이썬으로 db를 만질 수 있는 00001.py라는 파일이 생성된다.
+    게시판의 내용을 바꾸고 싶을 때 => 몇번이고 makemigrations를 할 수 있다.
+2. migrate 하면 드디어 db를 만지게 됨. 여기서 부터 수정이 복잡해짐. 따라서 설계를 잘 해야함
